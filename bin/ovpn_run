@@ -97,4 +97,5 @@ if [ $? = 0 ]; then
 fi
 
 echo "Running 'openvpn ${ARGS[@]} ${USER_ARGS[@]}'"
+dnsmasq --server=/baysidehealth.intra/172.22.12.10 --server=8.8.8.8
 exec openvpn ${ARGS[@]} ${USER_ARGS[@]}
